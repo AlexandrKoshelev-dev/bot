@@ -3,6 +3,7 @@ require("dotenv").config()
 const Raffle = require("../models/raffle")
 
 const TOKEN = process.env.TOKEN
+const CHANNEL = process.env.CHANNEL
 
 const bot = new TelegramBot(TOKEN, {
   polling: true,
@@ -10,7 +11,7 @@ const bot = new TelegramBot(TOKEN, {
 
 const newPost = (ctx) => {
   bot
-    .sendMessage("@testmybotfor", ctx.text, {
+    .sendMessage(CHANNEL, ctx.text, {
       reply_markup: {
         inline_keyboard: [
           [
@@ -23,24 +24,33 @@ const newPost = (ctx) => {
       },
     })
     .then(async (msg) => {
-      const raffle = new Raffle(ctx.text, ctx.cont, msg.message_id)
+      const raffle = new Raffle(ctx.text, ctx.count, msg.message_id)
       await raffle.save()
     })
 }
 
 bot.on("callback_query", async (query) => {
-  const candidate = await Raffle.getOne(query.message.message_id).then(
-    async (ctx) => {
-      return ctx
-    }
-  )
+  const candidate = await Raffle.getOne(query.message.message_id)
   candidate.members.push(query.from.username)
-
-  console.log(candidate)
-
-  // candidate.addMember()
-
-  bot.answerCallbackQuery(query.id, "Теперь вы участник розыгрыша!")
+  await Raffle.addMember(candidate).then(async (result) => {
+    if (result != 0) {
+      bot.answerCallbackQuery(
+        query.id,
+        `Теперь вы участник розыгрыша! Количество участников: ${await Raffle.countMembers(
+          candidate
+        )}`
+      )
+      // обновить сообщение количество участников
+    } else {
+      bot.answerCallbackQuery(
+        query.id,
+        `Вы уже участвуете! Количество участников: ${await Raffle.countMembers(
+          candidate
+        )}`
+      )
+      console.log(await Raffle.randomWinners(candidate))
+    }
+  })
 })
 
 module.exports.newPost = newPost

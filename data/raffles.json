@@ -1,1 +1,71 @@
-[{"text":"aa","countWinners":"22","id":36,"dateBegin":1649430729636},{"text":"asas","countWinners":"44","id":37,"dateBegin":1649430884841},{"text":"121","countWinners":"1212","id":38,"dateBegin":1649430911259},{"text":"qqw","countWinners":"11","id":40,"dateBegin":1649431139339},{"text":"12","countWinners":"12","id":41,"dateBegin":1649431229945},{"text":"11","countWinners":"11","id":42,"dateBegin":1649431333657},{"text":"aa","countWinners":"1","id":43,"dateBegin":1649431702870},{"text":"aaa","countWinners":"22","id":44,"dateBegin":1649431823848},{"text":"aa","countWinners":"212","id":45,"dateBegin":1649431890732},{"text":"112","countWinners":"1111111111","id":46,"dateBegin":1649432905701,"members":[]},{"text":"122","countWinners":"1212","id":47,"dateBegin":1649433213747,"members":[]},{"text":"new cond","countWinners":"22","id":49,"dateBegin":1649708214872,"members":[]},{"text":"new cond","countWinners":"22","id":49,"dateBegin":1649710063712,"members":["okolodinosaur"]},{"text":"new cond","countWinners":"22","id":49,"dateBegin":1649710068092,"members":["okolodinosaur"]},{"text":"new cond","countWinners":"22","id":49,"dateBegin":1649710071470,"members":["okolodinosaur"]},{"text":"new cond","countWinners":"22","id":49,"dateBegin":1649710074542,"members":["okolodinosaur"]},{"text":"122","countWinners":"1212","id":47,"dateBegin":1649710076805,"members":["okolodinosaur"]},{"text":"qwq","countWinners":"1","id":50,"dateBegin":1649710130733},{"text":"aaaaa","countWinners":"2","id":51,"dateBegin":1649710315066,"members":[]},{"text":"aaaaa","countWinners":"2","id":51,"dateBegin":1649710327616,"members":[]},{"text":"aaaaa","countWinners":"2","id":51,"dateBegin":1649710350307,"members":[]},{"text":"app","countWinners":"3","id":52,"dateBegin":1649710476777},{"text":"app","countWinners":"3","id":52,"dateBegin":1649710838451,"members":[]},{"text":"app","countWinners":"3","id":52,"dateBegin":1649710860043,"members":[]},{"text":"app","countWinners":"3","id":52,"dateBegin":1649712626860,"members":[]},{"text":"asa","countWinners":"11","id":54,"dateBegin":1649712698464,"members":[]},{"text":"aaaa","countWinners":"12","id":55,"dateBegin":1649712813183,"members":[]},{"text":"new","countWinners":"11","id":56,"dateBegin":1649714345500,"members":[]},{"text":"aassasa","countWinners":"12","id":57,"dateBegin":1649714523375,"members":[]},{"text":"111","countWinners":"12","id":58,"dateBegin":1649716298342,"members":[]},{"text":"sss","countWinners":"12","id":59,"dateBegin":1649782275534,"members":[]}]
+[
+  {
+    "text": "asa",
+    "countWinners": "1",
+    "id": 63,
+    "dateBegin": 1649961711344,
+    "members": ["okolodinosaur", "okolodinosaur"]
+  },
+  {
+    "text": "asa",
+    "countWinners": "1",
+    "id": 62,
+    "dateBegin": 1649961711344,
+    "members": ["okolodinosaur", "okolodinosaur"]
+  },
+  {
+    "text": "new ",
+    "countWinners": "2",
+    "id": 64,
+    "dateBegin": 1649963440879,
+    "members": ["okolodinosaur"]
+  },
+  {
+    "text": "1",
+    "countWinners": "1",
+    "id": 65,
+    "dateBegin": 1649968575947,
+    "members": ["okolodinosaur"]
+  },
+  {
+    "text": "a",
+    "countWinners": "2",
+    "id": 66,
+    "dateBegin": 1649968724680,
+    "members": ["okolodinosaur"]
+  },
+  {
+    "text": "пацаны разадача 5К",
+    "countWinners": "3",
+    "id": 67,
+    "dateBegin": 1649969300364,
+    "members": ["okolodinosaur"]
+  },
+  {
+    "text": "жопа серого ",
+    "countWinners": "3",
+    "id": 69,
+    "dateBegin": 1649969887306,
+    "members": ["okolodinosaur"]
+  },
+  {
+    "text": "chnnl",
+    "countWinners": "2",
+    "id": 70,
+    "dateBegin": 1649971131765,
+    "members": []
+  },
+  {
+    "text": "count",
+    "id": 71,
+    "dateBegin": 1649971205258,
+    "members": ["okolodinosaur"]
+  },
+  {
+    "text": "win",
+    "countWinners": "4",
+    "id": 72,
+    "dateBegin": 1649973038323,
+    "members": ["okolodinosaur"]
+  }
+]
