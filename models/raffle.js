@@ -105,10 +105,13 @@ class Raffle {
     try {
       const raffle = await Raffle.getOne(candidate.id)
       const winners = []
-      for (let w = 0; w < raffle.countWinners; w++) {
-        winners.push(
+
+      while (winners.length < raffle.countWinners) {
+        const winner =
           raffle.members[Math.floor(Math.random() * raffle.members.length)]
-        )
+        if (!winners.find((v) => v === winner)) {
+          winners.push(winner)
+        }
       }
       return winners
     } catch (e) {

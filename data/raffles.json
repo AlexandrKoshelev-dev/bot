@@ -63,9 +63,23 @@
   },
   {
     "text": "win",
-    "countWinners": "4",
+    "countWinners": "2",
     "id": 72,
     "dateBegin": 1649973038323,
-    "members": ["okolodinosaur"]
+    "members": ["okolodinosaur", "noname", "victor", "sergey", "eminem"]
+  },
+  {
+    "text": "post  ",
+    "countWinners": "1",
+    "id": 73,
+    "dateBegin": 1650046021865,
+    "members": ["serjiqqqq"]
+  },
+  {
+    "text": "жопа серого",
+    "countWinners": "3",
+    "id": 74,
+    "dateBegin": 1650046466670,
+    "members": ["KIRST_1"]
   }
 ]

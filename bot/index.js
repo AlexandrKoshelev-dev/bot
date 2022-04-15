@@ -30,27 +30,32 @@ const newPost = (ctx) => {
 }
 
 bot.on("callback_query", async (query) => {
-  const candidate = await Raffle.getOne(query.message.message_id)
-  candidate.members.push(query.from.username)
-  await Raffle.addMember(candidate).then(async (result) => {
-    if (result != 0) {
-      bot.answerCallbackQuery(
-        query.id,
-        `Теперь вы участник розыгрыша! Количество участников: ${await Raffle.countMembers(
-          candidate
-        )}`
-      )
-      // обновить сообщение количество участников
-    } else {
-      bot.answerCallbackQuery(
-        query.id,
-        `Вы уже участвуете! Количество участников: ${await Raffle.countMembers(
-          candidate
-        )}`
-      )
-      console.log(await Raffle.randomWinners(candidate))
-    }
-  })
+  //проверка на подписку
+  if ((await bot.getChatMember(CHANNEL, query.from.id)).status !== "member") {
+    bot.answerCallbackQuery(query.id, `Сначала подпишись на канал!`)
+  } else {
+    const candidate = await Raffle.getOne(query.message.message_id)
+    candidate.members.push(query.from.username)
+    await Raffle.addMember(candidate).then(async (result) => {
+      if (result != 0) {
+        bot.answerCallbackQuery(
+          query.id,
+          `Теперь вы участник розыгрыша! Количество участников: ${await Raffle.countMembers(
+            candidate
+          )}`
+        )
+        // обновить сообщение количество участников
+      } else {
+        bot.answerCallbackQuery(
+          query.id,
+          `Вы уже участвуете! Количество участников: ${await Raffle.countMembers(
+            candidate
+          )}`
+        )
+        console.log(await bot.getChatMember(CHANNEL, query.from.id))
+      }
+    })
+  }
 })
 
 module.exports.newPost = newPost
