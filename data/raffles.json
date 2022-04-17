@@ -23,63 +23,101 @@
   {
     "text": "1",
     "countWinners": "1",
-    "id": 65,
-    "dateBegin": 1649968575947,
-    "members": ["okolodinosaur"]
+    "id": 106,
+    "dateBegin": 1650226596288,
+    "dateEnding": "2022-04-17T20:17:00.000Z",
+    "members": [
+      { "userName": "serjiqqqq", "userId": 307407878 },
+      { "userName": "okolodinosaur", "userId": 1011422286 }
+    ]
   },
   {
-    "text": "a",
-    "countWinners": "2",
-    "id": 66,
-    "dateBegin": 1649968724680,
-    "members": ["okolodinosaur"]
+    "text": "1",
+    "countWinners": "1",
+    "id": 108,
+    "dateBegin": 1650228518896,
+    "dateEnding": "2022-04-17T20:49:00.000Z",
+    "members": [
+      { "userName": "serjiqqqq", "userId": 307407878 },
+      { "userName": "okolodinosaur", "userId": 1011422286 }
+    ]
   },
   {
-    "text": "пацаны разадача 5К",
-    "countWinners": "3",
-    "id": 67,
-    "dateBegin": 1649969300364,
-    "members": ["okolodinosaur"]
+    "text": "1",
+    "countWinners": "1",
+    "id": 109,
+    "dateBegin": 1650228861029,
+    "dateEnding": "2022-04-17T20:55:00.000Z",
+    "members": [
+      { "userName": "serjiqqqq", "userId": 307407878 },
+      { "userName": "okolodinosaur", "userId": 1011422286 },
+      { "userName": "mkhotsevich", "userId": 592192354 }
+    ]
   },
   {
-    "text": "жопа серого ",
-    "countWinners": "3",
-    "id": 69,
-    "dateBegin": 1649969887306,
-    "members": ["okolodinosaur"]
-  },
-  {
-    "text": "chnnl",
-    "countWinners": "2",
-    "id": 70,
-    "dateBegin": 1649971131765,
+    "text": "1",
+    "countWinners": "1",
+    "id": 110,
+    "dateBegin": 1650228952261,
+    "dateEnding": "2022-04-17T20:56:00.000Z",
     "members": []
   },
   {
-    "text": "count",
-    "id": 71,
-    "dateBegin": 1649971205258,
-    "members": ["okolodinosaur"]
-  },
-  {
-    "text": "win",
-    "countWinners": "2",
-    "id": 72,
-    "dateBegin": 1649973038323,
-    "members": ["okolodinosaur", "noname", "victor", "sergey", "eminem"]
-  },
-  {
-    "text": "post  ",
+    "text": "1",
     "countWinners": "1",
-    "id": 73,
-    "dateBegin": 1650046021865,
-    "members": ["serjiqqqq"]
+    "id": 111,
+    "dateBegin": 1650228973319,
+    "dateEnding": "2022-04-17T20:57:00.000Z",
+    "members": [
+      { "userName": "mkhotsevich", "userId": 592192354 },
+      { "userName": "serjiqqqq", "userId": 307407878 },
+      { "userName": "okolodinosaur", "userId": 1011422286 }
+    ]
   },
   {
-    "text": "жопа серого",
-    "countWinners": "3",
-    "id": 74,
-    "dateBegin": 1650046466670,
-    "members": ["KIRST_1"]
+    "text": "1",
+    "countWinners": "1",
+    "id": 112,
+    "dateBegin": 1650229222021,
+    "dateEnding": "2022-04-17T21:01:00.000Z",
+    "members": [{ "userName": "mkhotsevich", "userId": 592192354 }]
+  },
+  {
+    "text": "1",
+    "countWinners": "1",
+    "id": 113,
+    "dateBegin": 1650229415713,
+    "dateEnding": "2022-04-17T21:04:00.000Z",
+    "members": [{ "userName": "mkhotsevich", "userId": 592192354 }]
+  },
+  {
+    "text": "1",
+    "countWinners": "2",
+    "id": 115,
+    "dateBegin": 1650229502987,
+    "dateEnding": "2022-04-17T21:05:00.000Z",
+    "members": [{ "userName": "mkhotsevich", "userId": 592192354 }]
+  },
+  {
+    "text": "1",
+    "countWinners": "2",
+    "id": 116,
+    "dateBegin": 1650229535371,
+    "dateEnding": "2022-04-17T21:07:00.000Z",
+    "members": [
+      { "userName": "mkhotsevich", "userId": 592192354 },
+      { "userName": "serjiqqqq", "userId": 307407878 }
+    ]
+  },
+  {
+    "text": "1",
+    "countWinners": "2",
+    "id": 118,
+    "dateBegin": 1650229693470,
+    "dateEnding": "2022-04-17T21:10:00.000Z",
+    "members": [
+      { "userName": "mkhotsevich", "userId": 592192354 },
+      { "userName": "serjiqqqq", "userId": 307407878 }
+    ]
   }
 ]

@@ -1,13 +1,14 @@
 const fs = require("fs")
 const path = require("path")
+const WinnerMember = require("../bot/index")
 
 class Raffle {
-  constructor(text, countWinners, id) {
+  constructor(text, countWinners, id, dateEnding) {
     this.text = text
     this.members = []
     this.countWinners = countWinners
     this.dateBegin = Date.now()
-    // this.dateEnding = dateEnding
+    this.dateEnding = dateEnding
     this.id = id
   }
 
@@ -17,6 +18,7 @@ class Raffle {
       countWinners: this.countWinners,
       id: this.id,
       dateBegin: this.dateBegin,
+      dateEnding: this.dateEnding,
       members: this.members,
     }
   }
@@ -69,13 +71,17 @@ class Raffle {
   static async addMember(candidate) {
     const raffles = await Raffle.getAll()
     const raffle = await raffles.find((v) => v.id === candidate.id)
-    if (raffle.members.find((v) => v === candidate.members[0])) {
+    if (
+      raffle.members.find(
+        (v) => JSON.stringify(v) === JSON.stringify(candidate.members.at(-1))
+      )
+    ) {
       console.log("Вы уже участник!")
       return 0
     } else {
-      const newRaffles = raffles.filter((v) => v.id !== candidate.id)
-      newRaffles.push(candidate)
       try {
+        const newRaffles = raffles.filter((v) => v.id !== candidate.id)
+        newRaffles.push(candidate)
         fs.writeFile(
           path.join(__dirname, "..", "data", "raffles.json"),
           JSON.stringify(newRaffles),
@@ -101,23 +107,27 @@ class Raffle {
     }
   }
 
-  static async randomWinners(candidate) {
+  static async randomWinners(raffle) {
     try {
-      const raffle = await Raffle.getOne(candidate.id)
-      const winners = []
-
-      while (winners.length < raffle.countWinners) {
-        const winner =
-          raffle.members[Math.floor(Math.random() * raffle.members.length)]
-        if (!winners.find((v) => v === winner)) {
-          winners.push(winner)
-        }
-      }
-      return winners
+      const members = await WinnerMember.winnerMember(raffle.members)
+      return getRandom(members, raffle.countWinners)
     } catch (e) {
       console.log(e)
     }
   }
 }
 
+function getRandom(arr, n) {
+  let result = new Array(n)
+  let len = arr.length
+  let taken = new Array(len)
+  if (n > len)
+    throw new RangeError("getRandom: more elements taken than available")
+  while (n--) {
+    let x = Math.floor(Math.random() * len)
+    result[n] = arr[x in taken ? taken[x] : x]
+    taken[x] = --len in taken ? taken[len] : len
+  }
+  return result
+}
 module.exports = Raffle
